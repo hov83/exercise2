@@ -11,3 +11,18 @@
 /* --------------- Boilerplate --------------- */
 
 @import "../../node_modules/@vanillaforums/theme-boilerplate/src/scss/custom";
+
+/* --------------- Banner control --------------- */
+
+@import "sections/bannersection";
+
+@media screen and (max-width: 768px) {
+    div.Frame-top > div.bannerImgReplacer {
+        display:block;
+        margin-top:20px;
+    }
+
+    .MyHero  {
+        display:none;
+    }
+}

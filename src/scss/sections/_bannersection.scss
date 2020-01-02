@@ -1,0 +1,29 @@
+.Frame-content .HomepageTitle {
+    display:none;
+}
+
+div.Frame-top > div.bannerImgReplacer {
+    display:none;
+}
+
+//in case the hero plugin is deactivated
+.Frame-top  .HomepageTitle {
+    margin-top:10px;
+}
+
+
+.MyHero {
+    width: 100%;
+    height: 300px;
+    background-color: grey;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    h1 {
+        padding: 100px;
+        color:whitesmoke;
+    }
+}
+
+
