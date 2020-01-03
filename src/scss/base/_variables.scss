@@ -9,7 +9,7 @@
 \* -------------------------------------------------------------- */
 
 $global-color_vanillaBlue:              #0291DB;
-$global-color_pink:                     #D0021B;
+$global-color_pink:                     #F5286C;
 $global-color_grey:                     #555A62;
 $global-color_whitesmoke:               #BCBEC1;
 
@@ -79,7 +79,7 @@ $global-main_width:                     1236px !default; // To match KB
 $global_spacer:                         $userContent_fontSize * $global-base_lineHeight !default;
 $global-default_timing:                 0.35s !default;
 
-$global-color_primary:                  $global-color_vanillaBlue !default;
+$global-color_primary:                  $global-color_pink !default;
 $global-color_primaryAlt:               darken($global-color_primary, 8%) !default;
 $global-color_secondary:                $global-color_pink !default;
 

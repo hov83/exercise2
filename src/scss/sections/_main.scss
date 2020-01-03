@@ -1,0 +1,22 @@
+.MainContent.Content.PannelHidden {
+    width: 100%;
+}
+
+.Frame-details {
+    @include clearfix;
+
+    .SearchBoxMobile {
+        display: none;
+
+        @include maxWidth($theme-breakpoint_tablet) {
+            display: none;
+        }
+
+        @include maxWidth($theme-breakpoint_smallTable) {
+            display: block;
+        }
+
+
+    }
+
+}

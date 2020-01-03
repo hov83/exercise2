@@ -1,6 +1,6 @@
-.Frame-content .HomepageTitle {
-    display:none;
-}
+//.Frame-content .HomepageTitle {
+//    display:none;
+//}
 
 div.Frame-top > div.bannerImgReplacer {
     display:none;
@@ -19,11 +19,46 @@ div.Frame-top > div.bannerImgReplacer {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     h1 {
         padding: 100px;
         color:whitesmoke;
     }
 }
+
+
+.BannerSearchBox {
+    flex-basis: 50%;
+}
+
+.BannerSearchBox > form > div {
+    display:flex;
+
+    #Form_Search {
+        border: 1px solid whitesmoke;
+        border-bottom-right-radius: 0px;
+        border-top-right-radius: 0px;
+        border-right: none;
+        flex-grow: 4;
+    }
+
+    #Form_Go {
+        position:relative;
+        border: 1px solid whitesmoke;
+        color:white;
+        border-bottom-left-radius: 0px;
+        border-top-left-radius: 0px;
+        border-left: none;
+        width:60px;
+
+        &:hover {
+            background: #F5286C;
+        }
+    }
+}
+
 
 

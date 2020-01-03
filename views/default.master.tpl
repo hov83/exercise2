@@ -138,8 +138,17 @@
             {if {banner_image_url}}
                 {if inSection("DiscussionList") || inSection("CategoryList")}
                     <div class="MyHero Herobanner-bgImage" style="background-image: url('{banner_image_url}')">
-                        <h1>{$Title}</h1>
-                        <p>{$Description}</p>
+{*                        <h1>{$Title}</h1>*}
+{*                        <p>{$Description}</p>*}
+                        {if $hasAdvancedSearch}
+                            <div class="BannerSearchBox AdvancedSearch">
+                                {module name="AdvancedSearchModule"}
+                            </div>
+                        {else}
+                            <div class="BannerSearchBox">
+                                {searchbox}
+                            </div>
+                        {/if}
                     </div>
                     <div class="bannerImgReplacer" >
                         <div class="Container">
@@ -195,6 +204,28 @@
                                     </div>
                                 {/if}
                                 <div class="Frame-row">
+                                    {if $isHomepage}
+                                        <main class="Content MainContent PannelHidden">
+                                            {if inSection("Profile")}
+                                                <div class="Profile-header">
+                                                    <div class="Profile-photo">
+                                                        <div class="PhotoLarge">
+                                                            {module name="UserPhotoModule"}
+                                                        </div>
+                                                    </div>
+                                                    <div class="Profile-name">
+                                                        <h1 class="Profile-username">
+                                                            {$Profile.Name|escape:'html'}
+                                                        </h1>
+                                                        {if isset($Rank)}
+                                                            <span class="Profile-rank">{$Rank.Label|escape:'html'}</span>
+                                                        {/if}
+                                                    </div>
+                                                </div>
+                                            {/if}
+                                            {asset name="Content"}
+                                        </main>
+                                    {else}
                                     <main class="Content MainContent">
                                         {if inSection("Profile")}
                                             <div class="Profile-header">
@@ -215,14 +246,16 @@
                                         {/if}
                                         {asset name="Content"}
                                     </main>
-                                    <aside class="Panel Panel-main">
-                                        {if !$SectionGroups && !$DataDrivenTitleBar}
-                                            <div class="SearchBox js-sphinxAutoComplete" role="search">
-                                                {searchbox}
-                                            </div>
-                                        {/if}
-                                        {asset name="Panel"}
-                                    </aside>
+                                    {/if}
+
+                                        <aside class="Panel Panel-main">
+                                            {if !$SectionGroups && !$DataDrivenTitleBar}
+                                                <div class="SearchBox js-sphinxAutoComplete" role="search">
+                                                    {searchbox}
+                                                </div>
+                                            {/if}
+                                            {asset name="Panel"}
+                                        </aside>
                                 </div>
                             </div>
                         </div>

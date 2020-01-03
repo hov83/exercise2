@@ -12,15 +12,23 @@
 
 @import "../../node_modules/@vanillaforums/theme-boilerplate/src/scss/custom";
 
+/* --------------- Header --------------- */
+
+@import "sections/header";
+
 /* --------------- Banner control --------------- */
 
 @import "sections/bannersection";
 
+/* --------------- Main --------------- */
+
+@import "sections/main";
+
 @media screen and (max-width: 768px) {
-    div.Frame-top > div.bannerImgReplacer {
-        display:block;
-        margin-top:20px;
-    }
+    //div.Frame-top > div.bannerImgReplacer {
+    //    display:block;
+    //    margin-top:20px;
+    //}
 
     .MyHero  {
         display:none;
