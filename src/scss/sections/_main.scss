@@ -1,5 +1,62 @@
 .MainContent.Content.PannelHidden {
     width: 100%;
+
+    ul.DataList.CategoryList {
+        display:flex;
+        flex-wrap: wrap;
+
+        .Item, .Item.Read {
+            border:1px solid lightgrey;
+            border-radius:10px;
+            margin: 10px;
+            flex-basis:200px;
+            height:250px;
+
+        }
+    }
+
+    ul.DataList.CategoryList .ItemContent {
+        padding:5px;
+        display:flex;
+        flex-direction:column;
+        .CategoryDescription, .LastDiscussionTitle {
+            display:none;
+        }
+
+        .Options {
+            align-self:flex-end;
+        }
+
+        .PhotoWrap {
+            border-radius:0;
+            height:150px;
+            width:150px;
+            align-self:center;
+
+            .CategoryPhoto {
+                max-height:150px;
+            }
+        }
+
+        .TitleWrap {
+            align-self:center;
+            margin-top:6px;
+        }
+    }
+
+    .HomepageTitle {
+        text-align:center;
+    }
+
+    .DataList .Item {
+        margin-top: 10px;
+        border-bottom: 1px solid #d6d7d9;
+        border-radius:8px;
+    }
+
+   .Box li:first-child {
+      border: 1px solid #d6d7d9;
+   }
 }
 
 .Frame-details {
@@ -20,3 +77,32 @@
     }
 
 }
+
+
+.Content .Box > h4 {
+    font-size: 250%;
+    margin:50px;
+    text-align:center;
+}
+
+.DataList .Item {
+    border: 1px solid #d6d7d9;
+    border-radius: 0px;
+    padding: 10px;
+    border-bottom: none;
+}
+
+ul.Datalist.Discussions li:first-child {
+    border: 1px solid #d6d7d9;
+    //border-radius: 8px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+
+}
+
+
+
+
+
+
+
